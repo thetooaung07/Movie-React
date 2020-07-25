@@ -3,7 +3,7 @@ import "../assets/css/Watched.css"
 
 export const Watched = () => {
   return (
-    <div className="Watched">
+    <div className="Watched text-secondary">
       Watched Page
     </div>
   )

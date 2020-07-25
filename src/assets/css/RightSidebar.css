@@ -1,0 +1,28 @@
+.RightSidebar {
+  display: block;
+  padding-left: 10px;
+  height: 100vh;
+  background-color: rgba(182, 182, 182, 0.808);
+  width: 170px;
+  position: fixed;
+}
+
+.ul-nav * {
+  color:white;
+}
+
+.ul-nav {
+  list-style-type: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+.li-1, 
+.li-2,
+.li-3 {
+  margin-bottom: 40px;
+}
+.Sidebar-layer {
+  width: 170px;
+}
