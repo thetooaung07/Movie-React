@@ -1,0 +1,21 @@
+.MovieCard {
+  position: relative;
+}
+
+.MovieCard img {
+  border-radius: 1rem;
+  min-width: 200px;
+  max-width: 200px;
+  min-height: 300px;
+  max-height: 300px;
+ 
+}
+
+.movie-card-hover{
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  color: white;
+  background: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8970938717283788) 40%, rgba(0,0,0,0.7206232834930848) 66%, rgba(0,0,0,0) 100%);
+  opacity: 0.9;
+}

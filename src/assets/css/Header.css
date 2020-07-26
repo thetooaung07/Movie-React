@@ -1,0 +1,8 @@
+.Header li {
+  font-size: 20px;
+  border-radius: 50%;
+}
+
+.Header li:hover {
+  background-color: rgba(221, 221, 221, 0.788);
+}
