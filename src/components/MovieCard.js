@@ -11,8 +11,6 @@ export const MovieCard = ({ movie, tvShow, type }) => {
 
   return (
     <>
-
-
       {type === "movie" && movie && movie.poster_path && (
         <div
           className="MovieCard m-2"
@@ -29,10 +27,15 @@ export const MovieCard = ({ movie, tvShow, type }) => {
 
           {type === "movie" && isHovering && (
             <div className="movie-card-hover">
-              {movie.title}
-              {movie.release_date && (
-                <div className="">{movie.release_date.substring(0, 4)}</div>
-              )}
+              <div className="w2-hover">
+              <button className="btn btn-sm text-light btnHover" onClick={()=> console.log('Btn click')}><i className="fa fa-eye"></i></button>
+              </div>
+              <div className="title-rd-hover">
+                {movie.title}
+                {movie.release_date && (
+                  <div className="">{movie.release_date.substring(0, 4)}</div>
+                )}
+              </div>
             </div>
           )}
         </div>
@@ -53,10 +56,15 @@ export const MovieCard = ({ movie, tvShow, type }) => {
 
           {type === "TvShow" && isHovering && (
             <div className="movie-card-hover">
-              {tvShow.name}
-              {tvShow.first_air_date && (
-                <div className="">{tvShow.first_air_date}</div>
-              )}
+              <div className="w2-hover">
+                <button className="btn btn-sm text-light btnHover"><i className="fa fa-eye"></i></button>
+              </div>
+              <div className="title-rd-hover">
+                {tvShow.name}
+                {tvShow.first_air_date && (
+                  <div className="">{tvShow.first_air_date}</div>
+                )}
+              </div>
             </div>
           )}
         </div>

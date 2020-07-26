@@ -28,7 +28,7 @@ export const HomePage = () => {
     <div className="HomePage">
       <Header></Header>
 
-      <div>
+      <div className="wrapper">
         <h5 className="text-secondary">Upcoming Movies</h5>
         <div className="MovieCard-container">
           {data.map((movie) => (

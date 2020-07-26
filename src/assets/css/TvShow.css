@@ -1,6 +1,13 @@
 .TvShow {
+  margin-top: 50px;
+  margin-left: 27px;
+}
+
+
+.TvShow-container {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   flex-wrap: wrap;
+  
 }
