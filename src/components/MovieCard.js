@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "../assets/css/MovieCard.css";
 import { Link } from "react-router-dom";
+import { GlobalContext } from "../Context/GlobalState";
 
 export const MovieCard = ({ movie, tvShow, type }) => {
   const [isHovering, setIsHovering] = useState(false);
+
+  const {addMovieToWatchlist} = useContext(GlobalContext);
 
   const mouseEnterHandler = () => {
     setIsHovering(true);
@@ -28,7 +31,7 @@ export const MovieCard = ({ movie, tvShow, type }) => {
           {type === "movie" && isHovering && (
             <div className="movie-card-hover">
               <div className="w2-hover">
-              <button className="btn btn-sm text-light btnHover" onClick={()=> console.log('Btn click')}><i className="fa fa-eye"></i></button>
+              <button className="btn btn-sm text-light btnHover" onClick={()=>addMovieToWatchlist(movie)}><i className="fa fa-eye"></i></button>
               </div>
               <div className="title-rd-hover">
                 {movie.title}
@@ -57,7 +60,7 @@ export const MovieCard = ({ movie, tvShow, type }) => {
           {type === "TvShow" && isHovering && (
             <div className="movie-card-hover">
               <div className="w2-hover">
-                <button className="btn btn-sm text-light btnHover"><i className="fa fa-eye"></i></button>
+                <button className="btn btn-sm text-light btnHover" onClick={()=>addMovieToWatchlist(tvShow)}><i className="fa fa-eye"></i></button>
               </div>
               <div className="title-rd-hover">
                 {tvShow.name}

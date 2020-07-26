@@ -7,10 +7,12 @@ import { Watched } from "./components/Watched";
 import { RightSidebar } from "./components/RightSidebar";
 import { TvShow } from "./components/TvShow";
 import { MovieDescription } from "./components/MovieDescription";
+import { GlobalProvider } from "./Context/GlobalState";
 
 function App() {
   return (
     <div className="App">
+    <GlobalProvider>
       <Router>
         <RightSidebar></RightSidebar>
         <Switch>
@@ -20,7 +22,7 @@ function App() {
           <Route exact path="/tvshow" component={TvShow} />
           <Route exact path="/:id" component={MovieDescription} />
         </Switch>
-      </Router>
+      </Router></GlobalProvider>
     </div>
   );
 }
