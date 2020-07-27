@@ -17,7 +17,7 @@ export const RightSidebar = () => {
           </li>
           <div className="li-2">
             <li className="">
-              <Link to="/tvshow">TV Show</Link>
+              <Link to="/tvshow">TV Shows</Link>
             </li>
             <li className="">
               <Link to="/watchlist">Watchlist</Link>

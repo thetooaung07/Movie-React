@@ -19,17 +19,17 @@ export const TvShow = () => {
 
   return (
     <div className="TvShow">
-    <div className="wrapper">
-      <h4>TV Shows</h4>
-      <h6 className="text-left">Airing Today</h6>
+      <div className="wrapper">
+        <h4>TV Shows</h4>
+        <h6 className="text-left">Airing Today</h6>
 
-      <div className="TvShow-container">
-        {tvShows &&
-          tvShows.length > 0 &&
-          tvShows.map((tvShow) => (
-            <TvShowCard key={tvShow.id} tvShow={tvShow}></TvShowCard>
-          ))}
-      </div>
+        <div className="TvShow-container">
+          {tvShows &&
+            tvShows.length > 0 &&
+            tvShows.map((tvShow) => (
+              <TvShowCard key={tvShow.id} tvShow={tvShow}></TvShowCard>
+            ))}
+        </div>
       </div>
     </div>
   );

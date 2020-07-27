@@ -1,4 +1,4 @@
-.MovieCard {
+.posRelative {
   position: relative;
 }
 
@@ -62,4 +62,7 @@
 .fa-eye:hover {
   z-index: 4;
   color: rgb(4, 252, 24);
+}
+.tested {
+  display: block;
 }

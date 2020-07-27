@@ -11,39 +11,64 @@ export const MovieCard = ({ movie }) => {
   const btnMovieDisabled = localMovie ? true : false;
 
   return (
-    <div
-      className="MovieCard m-2"
-      onMouseEnter={() => setIsHovering(true)}
-      onMouseLeave={() => setIsHovering(false)}
-    >
-    {movie && movie.poster_path && 
-      <Link to={`/${movie.id}`}>
-        <img
-          className=""
-          src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
-          alt= {movie.title}
-        />
-      </Link>
-    }
-      {isHovering && (
-        <div className="card-hover">
-          <div className="w2-hover">
+    <>
+      {movie && movie.poster_path && (
+        <div
+          className="MovieCard m-2"
+          onMouseEnter={() => setIsHovering(true)}
+          onMouseLeave={() => setIsHovering(false)}
+        >
+          <div className="posRelative">
+            <img
+              className=""
+              src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
+              alt={movie.title}
+            />
+            {isHovering && (
+              <Link to={`/movie/${movie.id}`}>
+                <div className="card-hover">
+                  <div className="title-rd-hover">
+                    {movie.title}
+                    {movie.release_date && (
+                      <div className="">
+                        {movie.release_date.substring(0, 4)}
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </Link>
+            )}
+          </div>
+
+          <div className="">
             <button
               disabled={btnMovieDisabled}
-              className="btn btn-sm text-light btnHover"
-              onClick={() => addMovieToWatchlist(movie)}
+              className="btn btn-sm"
+              onClick={(event) => {
+                event.stopPropagation();
+                addMovieToWatchlist(movie);
+              }}
             >
-              <i className="fa fa-eye"></i>
+              Click Me
             </button>
-          </div>
-          <div className="title-rd-hover">
-            {movie.title}
-            {movie.release_date && (
-              <div className="">{movie.release_date.substring(0, 4)}</div>
-            )}
           </div>
         </div>
       )}
-    </div>
+    </>
   );
 };
+
+{
+  /* <div className="w2-hover">
+              <button
+                disabled={btnMovieDisabled}
+                className="btn btn-sm text-light btnHover"
+                onClick={(event) => {
+                  event.stopPropagation();
+                  addMovieToWatchlist(movie);
+                }}
+              >
+                <i className="fa fa-eye"></i>
+              </button>
+            </div> */
+}

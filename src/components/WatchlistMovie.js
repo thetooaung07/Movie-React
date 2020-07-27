@@ -6,23 +6,21 @@ export const WatchlistMovie = ({ movie }) => {
   const [isHovering, setIsHovering] = useState(false);
   const { removeMovieFromWatchlist } = useContext(GlobalContext);
 
-
-
   return (
     <div
-      className="WatchlistMovie MovieCard m-2"
+      className="WatchlistMovie  m-2"
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
-    >
+    ><div className="posRelative">
       <img
         className=""
         src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
         alt={`${movie.title} Poster`}
       />
-      {isHovering && 
-        <div className="movie-card-hover">
+      {isHovering && (
+        <div className="card-hover">
           <div className="w2-hover">
-            <button 
+            <button
               className="btn btn-sm text-light btnHover"
               onClick={() => removeMovieFromWatchlist(movie.id)}
             >
@@ -37,7 +35,22 @@ export const WatchlistMovie = ({ movie }) => {
             )}
           </div>
         </div>
-      }
+      )}
+    </div>
+      
+
+      <div className="">
+        <button
+          // disabled={}
+          className="btn btn-sm"
+          // onClick={(event) => {
+          //   event.stopPropagation();
+          //   addMovieToWatchlist(movie);
+          // }}
+        >
+          Click Me
+        </button>
+      </div>
     </div>
   );
 };
