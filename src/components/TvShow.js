@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../assets/css/TvShow.css";
 import Axios from "axios";
-import { MovieCard } from "./MovieCard";
+import TvShowCard from "./TvShowCard";
 
 export const TvShow = () => {
   const [tvShows, setTvShows] = useState([]);
@@ -27,11 +27,7 @@ export const TvShow = () => {
         {tvShows &&
           tvShows.length > 0 &&
           tvShows.map((tvShow) => (
-            <MovieCard
-              key={tvShow.id}
-              type="TvShow"
-              tvShow={tvShow}
-            ></MovieCard>
+            <TvShowCard key={tvShow.id} tvShow={tvShow}></TvShowCard>
           ))}
       </div>
       </div>

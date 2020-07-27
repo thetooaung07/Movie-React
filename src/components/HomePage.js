@@ -32,7 +32,7 @@ export const HomePage = () => {
         <h5 className="text-secondary">Upcoming Movies</h5>
         <div className="MovieCard-container">
           {data.map((movie) => (
-            <MovieCard key={movie.id} type="movie" movie={movie} />
+            <MovieCard key={movie.id} movie={movie} />
           ))}
         </div>
       </div>

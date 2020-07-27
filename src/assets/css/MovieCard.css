@@ -1,6 +1,5 @@
 .MovieCard {
   position: relative;
-
 }
 
 .MovieCard img {
@@ -9,10 +8,9 @@
   max-width: 200px;
   min-height: 300px;
   max-height: 300px;
- 
 }
 
-.movie-card-hover{
+.card-hover {
   z-index: 2;
   position: absolute;
   top: 0px;
@@ -21,7 +19,11 @@
   bottom: 0px;
   width: 100%;
   color: white;
-  background: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8970938717283788) 40%);
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.8970938717283788) 40%
+  );
   opacity: 0.8;
   border-radius: 1rem;
 }
@@ -41,15 +43,23 @@
   z-index: 3;
 }
 
+.w2-hover i {
+  font-size: 16px;
+}
+
 .btnHover:focus {
   border: 0 !important;
   outline: 0 !important;
   box-shadow: none !important;
 }
 
-
 .btnHover:hover {
   border-bottom-right-radius: 1rem;
   border-top-left-radius: 1rem;
-  background-color: rgba(226, 226, 226, 0.788);
+  background-color: rgba(173, 173, 173, 0.349);
+}
+
+.fa-eye:hover {
+  z-index: 4;
+  color: rgb(4, 252, 24);
 }

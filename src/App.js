@@ -20,7 +20,7 @@ function App() {
           <Route exact path="/watchlist" component={Watchlist} />
           <Route exact path="/watched" component={Watched} />
           <Route exact path="/tvshow" component={TvShow} />
-          <Route exact path="/:id" component={MovieDescription} />
+          {/* <Route exact path="/:id" component={MovieDescription} /> */}
         </Switch>
       </Router></GlobalProvider>
     </div>
