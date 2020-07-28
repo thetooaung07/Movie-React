@@ -17,6 +17,16 @@ export default (state, action) => {
           (movie) => movie.id !== action.payload
         ),
       };
+      case "ADD_MOVIE_TO_FAVOURITE":
+        return {
+          ...state,
+          favourite:[ ...state.favourite, action.payload]
+        }
+      case "REMOVE_MOVIE_TO_FAVOURITE":
+        return{
+          ...state,
+          favourite: state.favourite.filter((movie)  => movie.id !== action.payload)
+        }
     default:
       return state;
   }

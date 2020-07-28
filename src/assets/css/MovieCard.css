@@ -3,12 +3,15 @@
 }
 
 .MovieCard img {
-  border-radius: 1rem;
+  border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
   min-width: 200px;
   max-width: 200px;
   min-height: 300px;
   max-height: 300px;
 }
+
+
 
 .card-hover {
   z-index: 2;
@@ -34,35 +37,27 @@
   width: 100%;
   bottom: 0px;
 }
-.w2-hover {
-  position: absolute;
-  color: white !important;
-  bottom: 0px;
-  right: 0px;
-  background-color: transparent;
-  z-index: 3;
-}
+
 
 .w2-hover i {
   font-size: 16px;
 }
 
-.btnHover:focus {
-  border: 0 !important;
-  outline: 0 !important;
-  box-shadow: none !important;
-}
 
-.btnHover:hover {
-  border-bottom-right-radius: 1rem;
-  border-top-left-radius: 1rem;
-  background-color: rgba(173, 173, 173, 0.349);
-}
 
 .fa-eye:hover {
   z-index: 4;
   color: rgb(4, 252, 24);
 }
-.tested {
-  display: block;
+
+.editBtn2, .editBtn2:active {
+  border-left: 1px solid rgb(206, 206, 206) !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+.editBtn1 {
+  border-bottom-left-radius: .5rem !important;
+}
+.editBtn2 {
+  border-bottom-right-radius: .5rem !important;
 }

@@ -19,11 +19,11 @@ export const RightSidebar = () => {
             <li className="">
               <Link to="/tvshow">TV Shows</Link>
             </li>
-            <li className="">
+            <li className="li-watchlist">
               <Link to="/watchlist">Watchlist</Link>
             </li>
-            <li className="li-Watched">
-              <Link to="/watched">Watched</Link>
+            <li className="li-Favourite">
+              <Link to="/favourite">Favourite</Link>
             </li>
           </div>
           <div className="li-3 text-left">

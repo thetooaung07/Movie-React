@@ -1,0 +1,9 @@
+.FavouriteList {
+
+  background-color: red;
+}
+
+.FavouriteList .imageResize {
+  width: auto;
+  height: 100px;
+}

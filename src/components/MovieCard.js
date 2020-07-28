@@ -3,22 +3,34 @@ import "../assets/css/MovieCard.css";
 import { Link } from "react-router-dom";
 import { GlobalContext } from "../Context/GlobalState";
 
+
 export const MovieCard = ({ movie }) => {
   const [isHovering, setIsHovering] = useState(false);
-  const { movieWatchlist, addMovieToWatchlist } = useContext(GlobalContext);
+  const {
+    movieWatchlist,
+    addMovieToWatchlist,
+    addMovieToFavourite,
+    favourite,
+    removeMovieFromFavourite,
+  } = useContext(GlobalContext);
 
-  let localMovie = movieWatchlist.find((obj) => obj.id === movie.id);
-  const btnMovieDisabled = localMovie ? true : false;
+  const localMovie = movieWatchlist.find((obj) => obj.id === movie.id)
+    ? true
+    : false;
+
+  const localFavMovie = favourite.find((obj) => obj.id === movie.id)
+    ? true
+    : false;
 
   return (
     <>
       {movie && movie.poster_path && (
-        <div
-          className="MovieCard m-2"
-          onMouseEnter={() => setIsHovering(true)}
-          onMouseLeave={() => setIsHovering(false)}
-        >
-          <div className="posRelative">
+        <div className="MovieCard m-2 mb-3">
+          <div
+            className="posRelative"
+            onMouseEnter={() => setIsHovering(true)}
+            onMouseLeave={() => setIsHovering(false)}
+          >
             <img
               className=""
               src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
@@ -40,35 +52,34 @@ export const MovieCard = ({ movie }) => {
             )}
           </div>
 
-          <div className="">
+          <div className="d-flex align-items-center editBtn">
             <button
-              disabled={btnMovieDisabled}
-              className="btn btn-sm"
-              onClick={(event) => {
-                event.stopPropagation();
+              disabled={localMovie}
+              className="btn btn-success btn-sm flex-grow-1 rounded-0 editBtn1"
+              onClick={() => {
                 addMovieToWatchlist(movie);
               }}
             >
-              Click Me
+              Add to Watchlist
             </button>
+            {!localFavMovie ? (
+              <button
+                className="btn btn-success btn-sm rounded-0 editBtn2"
+                onClick={() => addMovieToFavourite(movie)}
+              >
+                <i className="fa fa-heart-o"></i>
+              </button>
+            ) : (
+              <button
+                className="btn btn-success btn-sm rounded-0 editBtn2"
+                onClick={() => removeMovieFromFavourite(movie.id)}
+              >
+                <i className="fa fa-heart"></i>
+              </button>
+            )}
           </div>
         </div>
       )}
     </>
   );
 };
-
-{
-  /* <div className="w2-hover">
-              <button
-                disabled={btnMovieDisabled}
-                className="btn btn-sm text-light btnHover"
-                onClick={(event) => {
-                  event.stopPropagation();
-                  addMovieToWatchlist(movie);
-                }}
-              >
-                <i className="fa fa-eye"></i>
-              </button>
-            </div> */
-}

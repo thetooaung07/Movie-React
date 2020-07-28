@@ -36,6 +36,7 @@ ul {
   padding: 0;
 }
 
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -43,4 +44,13 @@ ul {
   to {
     transform: rotate(360deg);
   }
+}
+
+.w2-hover {
+  position: absolute;
+  color: white !important;
+  bottom: 0px;
+  right: 0px;
+  background-color: transparent;
+  z-index: 3;
 }

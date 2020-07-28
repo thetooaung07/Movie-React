@@ -3,7 +3,7 @@ import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { HomePage } from "./components/HomePage";
 import { Watchlist } from "./components/Watchlist";
-import { Watched } from "./components/Watched";
+import { Favourite } from "./components/Favourite";
 import { RightSidebar } from "./components/RightSidebar";
 import { TvShow } from "./components/TvShow";
 import { MovieDescription } from "./components/MovieDescription";
@@ -19,7 +19,7 @@ function App() {
           <Switch>
             <Route exact path="/" component={HomePage} />
             <Route exact path="/watchlist" component={Watchlist} />
-            <Route exact path="/watched" component={Watched} />
+            <Route exact path="/favourite" component={Favourite} />
             <Route exact path="/tvshow" component={TvShow} />
             <Route exact path="/movie/:id" component={MovieDescription} />
             <Route exact path="/tvShow/:id" component={TvShowDescription} />

@@ -8,8 +8,8 @@ const initialState = {
   tvShowWatchlist: localStorage.getItem("tvShowWatchlist")
     ? JSON.parse(localStorage.getItem("tvShowWatchlist"))
     : [],
-  watched: localStorage.getItem("watched")
-    ? JSON.parse(localStorage.getItem("watched"))
+  favourite: localStorage.getItem("favourite")
+    ? JSON.parse(localStorage.getItem("favourite"))
     : [],
 };
 
@@ -27,7 +27,7 @@ export const GlobalProvider = (props) => {
       "tvShowWatchlist",
       JSON.stringify(state.tvShowWatchlist)
     );
-    localStorage.setItem("watched", JSON.stringify(state.watched));
+    localStorage.setItem("favourite", JSON.stringify(state.favourite));
   }, [state]);
 
   const addMovieToWatchlist = (movie) => {
@@ -39,16 +39,24 @@ export const GlobalProvider = (props) => {
   const removeMovieFromWatchlist = (id) => {
     dispatch({ type: "REMOVE_MOVIE_FROM_WATCHLIST", payload: id });
   };
+  const addMovieToFavourite = (movie) => {
+    dispatch({ type: "ADD_MOVIE_TO_FAVOURITE", payload: movie });
+  };
+  const removeMovieFromFavourite = (id) => {
+    dispatch({ type: "REMOVE_MOVIE_TO_FAVOURITE", payload: id });
+  };
 
   return (
     <GlobalContext.Provider
       value={{
         movieWatchlist: state.movieWatchlist,
         tvShowWatchlist: state.tvShowWatchlist,
-        watched: state.watched,
+        favourite: state.favourite,
         addMovieToWatchlist,
         addTvShowToWatchlist,
         removeMovieFromWatchlist,
+        addMovieToFavourite,
+        removeMovieFromFavourite,
       }}
     >
       {props.children}

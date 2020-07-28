@@ -2,3 +2,7 @@
   z-index: 4;
   color: rgb(206, 0, 0);
 }
+
+.WatchlistMovie img {
+  border-radius: 1rem;
+}

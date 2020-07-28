@@ -12,12 +12,12 @@ const TvShowCard = ({ tvShow }) => {
   return (
     <>
       {tvShow && tvShow.poster_path && (
-        <div
-          className=" TvShowCard MovieCard m-2"
-          onMouseEnter={() => setIsHovering(true)}
-          onMouseLeave={() => setIsHovering(false)}
-        >
-          <div className="posRelative">
+        <div className=" TvShowCard MovieCard m-2 mb-3">
+          <div
+            className="posRelative mb-1"
+            onMouseEnter={() => setIsHovering(true)}
+            onMouseLeave={() => setIsHovering(false)}
+          >
             <img
               src={`https://image.tmdb.org/t/p/w200${tvShow.poster_path}`}
               alt={`${tvShow.name} Poster`}
@@ -25,15 +25,6 @@ const TvShowCard = ({ tvShow }) => {
             {isHovering && (
               <Link to={`/tvShow/${tvShow.id}`}>
                 <div className="card-hover">
-                  <div className="w2-hover">
-                    <button
-                      disabled={btnTvShwoDisabled}
-                      className="btn btn-sm text-light btnHover"
-                      onClick={() => addTvShowToWatchlist(tvShow)}
-                    >
-                      <i className="fa fa-eye"></i>
-                    </button>
-                  </div>
                   <div className="title-rd-hover">
                     {tvShow.name}
                     {tvShow.first_air_date && (
@@ -49,13 +40,10 @@ const TvShowCard = ({ tvShow }) => {
           <div className="">
             <button
               disabled={btnTvShwoDisabled}
-              className="btn btn-sm"
-              onClick={(event) => {
-                event.stopPropagation();
-                addTvShowToWatchlist(tvShow);
-              }}
+              className="btn btn-success btn-sm "
+              onClick={() => addTvShowToWatchlist(tvShow)}
             >
-              Click Me
+              Add to Watchlist
             </button>
           </div>
         </div>
