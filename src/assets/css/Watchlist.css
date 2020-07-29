@@ -1,3 +1,22 @@
 .Watchlist {
   margin-left: 27px;
 }
+
+.Watchlist .toggleMS button{
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding-bottom: 2px;
+}
+
+.Watchlist .toggleMS .btn1{
+  border-right: none !important;
+  border-top-left-radius: .5rem;
+  border-bottom-left-radius: .5rem;
+  box-shadow: inset 0px 0px 2px 0px rgba(43, 43, 43, 0.582);
+}
+.Watchlist .toggleMS .btn2{
+  border-left: 1px solid black !important;
+  border-top-right-radius: .5rem;
+  border-bottom-right-radius: .5rem;
+}

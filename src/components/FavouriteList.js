@@ -1,10 +1,10 @@
 import React from "react";
 import "../assets/css/FavouriteList.css";
-import {genres} from '../utils.js'
+
 
 export const FavouriteList = ({ favourite }) => {
 
-  console.log(genres);
+  
 
   return (
     <div className="FavouriteList mb-3 d-flex justify-content-start align-items-center">

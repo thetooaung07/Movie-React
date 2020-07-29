@@ -12,10 +12,10 @@ export const Favourite = () => {
       <h4 className="text-left">Favourites</h4>
       <hr></hr>
 
-      {
+      { favourite && favourite.length > 0 ? 
         favourite.map((favourite) => (
           <FavouriteList key={favourite.id} favourite={favourite}/>
-        ))
+        )) : <h3 className="text-secondary mt-5">No Movies</h3>
       }
     </div>
   );
