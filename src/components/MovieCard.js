@@ -27,18 +27,18 @@ export const MovieCard = ({ movie }) => {
       {movie && movie.poster_path && (
         <div className="MovieCard m-2 mb-3">
           <div
-            className="posRelative"
+            className="posRelative "
             onMouseEnter={() => setIsHovering(true)}
             onMouseLeave={() => setIsHovering(false)}
           >
             <img
-              className=""
+              
               src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
               alt={movie.title}
             />
             {isHovering && (
               <Link to={`/movie/${movie.id}`}>
-                <div className="card-hover">
+                <div className="card-hover rounded-0">
                   <div className="title-rd-hover">
                     {movie.title}
                     {movie.release_date && (

@@ -14,7 +14,7 @@ export const WatchlistMovie = ({ movie }) => {
         onMouseLeave={() => setIsHovering(false)}
       >
         <img
-          className=""
+          className="round-border"
           src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
           alt={`${movie.title} Poster`}
         />

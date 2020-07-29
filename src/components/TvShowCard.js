@@ -19,6 +19,7 @@ const TvShowCard = ({ tvShow }) => {
             onMouseLeave={() => setIsHovering(false)}
           >
             <img
+              className="round-border"
               src={`https://image.tmdb.org/t/p/w200${tvShow.poster_path}`}
               alt={`${tvShow.name} Poster`}
             />

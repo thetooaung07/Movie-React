@@ -54,3 +54,7 @@ ul {
   background-color: transparent;
   z-index: 3;
 }
+
+.round-border {
+  border-radius: 1rem;
+}

@@ -33,12 +33,17 @@ export const GlobalProvider = (props) => {
   const addMovieToWatchlist = (movie) => {
     dispatch({ type: "ADD_MOVIE_TO_WATCHLIST", payload: movie });
   };
-  const addTvShowToWatchlist = (movie) => {
-    dispatch({ type: "ADD_TVSHOW_TO_WATCHLIST", payload: movie });
-  };
   const removeMovieFromWatchlist = (id) => {
     dispatch({ type: "REMOVE_MOVIE_FROM_WATCHLIST", payload: id });
   };
+  const addTvShowToWatchlist = (movie) => {
+    dispatch({ type: "ADD_TVSHOW_TO_WATCHLIST", payload: movie });
+  };
+  const removeTvShowFromWatchlist = (id) => {
+    dispatch({type: "REMOVE_TVSHOW_FROM_WATCHLIST",payload: id})
+  }
+
+
   const addMovieToFavourite = (movie) => {
     dispatch({ type: "ADD_MOVIE_TO_FAVOURITE", payload: movie });
   };
@@ -53,8 +58,9 @@ export const GlobalProvider = (props) => {
         tvShowWatchlist: state.tvShowWatchlist,
         favourite: state.favourite,
         addMovieToWatchlist,
-        addTvShowToWatchlist,
         removeMovieFromWatchlist,
+        addTvShowToWatchlist,
+        removeTvShowFromWatchlist,
         addMovieToFavourite,
         removeMovieFromFavourite,
       }}
