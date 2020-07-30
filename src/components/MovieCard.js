@@ -10,7 +10,7 @@ export const MovieCard = ({ movie }) => {
     movieWatchlist,
     addMovieToWatchlist,
     addMovieToFavourite,
-    favourite,
+    movieFavourite,
     removeMovieFromFavourite,
   } = useContext(GlobalContext);
 
@@ -18,7 +18,7 @@ export const MovieCard = ({ movie }) => {
     ? true
     : false;
 
-  const localFavMovie = favourite.find((obj) => obj.id === movie.id)
+  const localFavMovie = movieFavourite.find((obj) => obj.id === movie.id)
     ? true
     : false;
 

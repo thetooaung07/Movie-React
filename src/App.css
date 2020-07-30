@@ -76,3 +76,16 @@ ul {
   border-top-right-radius: .5rem;
   border-bottom-right-radius: .5rem;
 }
+.img-wh {
+  min-width: 200px;
+  max-width: 200px;
+  min-height: 300px;
+  max-height: 300px;
+}
+
+.title-rd-hover {
+  transition: all 2s ease !important;
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+}

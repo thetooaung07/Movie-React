@@ -27,13 +27,25 @@ export default (state, action) => {
     case "ADD_MOVIE_TO_FAVOURITE":
       return {
         ...state,
-        favourite: [...state.favourite, action.payload],
+        movieFavourite: [...state.movieFavourite, action.payload],
       };
     case "REMOVE_MOVIE_TO_FAVOURITE":
       return {
         ...state,
-        favourite: state.favourite.filter(
+        movieFavourite: state.movieFavourite.filter(
           (movie) => movie.id !== action.payload
+        ),
+      };
+    case "ADD_TVSHOW_TO_FAVOURITE":
+      return {
+        ...state,
+        tvShowFavourite: [...state.tvShowFavourite, action.payload],
+      };
+    case "REMOVE_TVSHOW_FROM_FAVOURITE":
+      return {
+        ...state,
+        tvShowFavourite: state.tvShowFavourite.filter(
+          (tvShow) => tvShow.id !== action.payload
         ),
       };
     default:

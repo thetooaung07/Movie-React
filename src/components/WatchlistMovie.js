@@ -22,7 +22,7 @@ export const WatchlistMovie = ({ movie }) => {
           <div className="card-hover">
             <div className="w2-hover">
               <button
-                className="btn btn-sm text-light btnHover"
+                className="btn btn-sm text-light"
                 onClick={() => removeMovieFromWatchlist(movie.id)}
               >
                 <i className="fa fa-eye-slash"></i>
