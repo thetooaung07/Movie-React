@@ -1,9 +1,31 @@
 .FavouriteList {
-  width: 100%;
-  background-color: red;
+  width: 32%;
+  min-width: max-content;
+  background-color: rgba(74, 209, 119, 0.781);
+  box-shadow: 0px 0px 2px 0px rgba(43, 43, 43, 0.582);
+  position: relative;
 }
 
 .FavouriteList .imageResize {
   width: auto;
   height: 100px;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+.remove-fav {
+  position: absolute;
+  display: block;
+  z-index: 3;
+  top: 0;
+  right: 0;
+  border-top-right-radius: 1rem;
+}
+.remove-fav:hover {
+  background-color: coral;
+}
+.remove-fav,
+.remove-fav:focus {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important ;
 }
