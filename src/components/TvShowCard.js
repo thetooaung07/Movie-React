@@ -58,20 +58,22 @@ const TvShowCard = ({ tvShow }) => {
                       Add to Watchlist
                     </button>
                   )}
-                  {localFavTvShow ?<button
-                  disabled={localFavTvShow}
-                    className="btn btn-secondary btn-sm btnHover"
-                    onClick={() => addTvShowToFavourite(tvShow)}
-                  >
-                    Added to Favourite
-                  </button> : <button
-                  
-                  className="btn btn-outline-danger btn-sm btnHover"
-                  onClick={() => addTvShowToFavourite(tvShow)}
-                >
-                  Add to Favourite
-                </button>}
-                  
+                  {localFavTvShow ? (
+                    <button
+                      disabled={localFavTvShow}
+                      className="btn btn-secondary btn-sm btnHover"
+                      onClick={() => addTvShowToFavourite(tvShow)}
+                    >
+                      Added to Favourite
+                    </button>
+                  ) : (
+                    <button
+                      className="btn btn-outline-danger btn-sm btnHover"
+                      onClick={() => addTvShowToFavourite(tvShow)}
+                    >
+                      Add to Favourite
+                    </button>
+                  )}
                 </div>
               </div>
             )}

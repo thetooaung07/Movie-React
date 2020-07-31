@@ -1,0 +1,21 @@
+.FavouriteList {
+  position: relative;
+}
+
+.remove-fav {
+  position: absolute;
+  display: block;
+  z-index: 3;
+  top: 0;
+  right: 0;
+}
+.remove-fav:hover {
+  background-color: black;
+  color: white;
+}
+.remove-fav,
+.remove-fav:focus {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important ;
+}

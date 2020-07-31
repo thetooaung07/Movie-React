@@ -3,7 +3,6 @@ import "../assets/css/MovieCard.css";
 import { Link } from "react-router-dom";
 import { GlobalContext } from "../Context/GlobalState";
 
-
 export const MovieCard = ({ movie }) => {
   const [isHovering, setIsHovering] = useState(false);
   const {
@@ -32,7 +31,6 @@ export const MovieCard = ({ movie }) => {
             onMouseLeave={() => setIsHovering(false)}
           >
             <img
-              
               src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
               alt={movie.title}
             />
