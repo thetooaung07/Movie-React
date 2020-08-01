@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import "../assets/css/FavouriteMovie.css";
-import { GenreMovie } from "./GenreMovie";
+// import { GenreMovie } from "./GenreMovie";
 import { GlobalContext } from "../Context/GlobalState";
 
 export const FavouriteMovie = ({ movieFavourite }) => {
