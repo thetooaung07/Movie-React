@@ -72,7 +72,7 @@ ul {
   box-shadow: inset 0px 0px 2px 0px rgba(43, 43, 43, 0.582);
 }
 .toggleMS .btn2{
-  border-left: 1px solid black !important;
+  border-left: transparent solid rgb(255, 255, 255) !important;
   border-top-right-radius: .5rem;
   border-bottom-right-radius: .5rem;
 }

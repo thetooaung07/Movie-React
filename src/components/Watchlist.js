@@ -22,7 +22,7 @@ export const Watchlist = () => {
               Movies
             </button>
             <button
-              className="showColor btn2"
+              className="showColor btn2 mr-1"
               onClick={() => setIsClicked("tvShows")}
             >
               Shows
@@ -37,7 +37,7 @@ export const Watchlist = () => {
               Movies
             </button>
             <button
-              className="movieColor btn2"
+              className="movieColor btn2 mr-1"
               onClick={() => setIsClicked("tvShows")}
             >
               Shows
@@ -50,7 +50,7 @@ export const Watchlist = () => {
       {isClicked === "movies" && movieWatchlist && movieWatchlist.length > 0 ? (
         <div className="mt-2">
           <h4 className="text-left " style={{color:"#F93822FF"}}> Movies </h4>
-          <div className="MovieCard-container">
+          <div className="MovieCard-container pr-2">
             {movieWatchlist.map((movie) => (
               <WatchlistMovie key={movie.id} movie={movie} />
             ))}
@@ -68,7 +68,7 @@ export const Watchlist = () => {
       tvShowWatchlist.length > 0 ? (
         <div className="mt-2">
           <h4 className=" text-left " style={{color:"#FDD20EFF"}}> TV Shows </h4>
-          <div className="MovieCard-container">
+          <div className="MovieCard-container pr-2">
             {tvShowWatchlist.map((tvShow) => (
               <WatchlistShow key={tvShow.id} tvShow={tvShow} />
             ))}
