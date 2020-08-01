@@ -23,7 +23,7 @@ export const SimilarMovie = () => {
   return (
     <div className="PopularMovie d-flex ">
       {similarMovies.map((movie) => (
-        <div className="FavouriteMovie m-2 mb-3 ">
+        <div className="FavouriteMovie m-2 mb-3" key={movie.id}>
           <div className="posRelative">
             <img
               className="img-wh round-border "
