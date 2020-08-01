@@ -25,7 +25,7 @@ export const TvShowDescription = (props) => {
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
-    <div className="MovieDescription">
+    <div className="TvShowDescription MovieDescription">
       <h3 className="text-left">TV Show Description</h3>
       <hr className=" mb-4" />
 
