@@ -43,7 +43,7 @@ export const Favourite = () => {
         </div>
       )}
       {movieFavourite.length === 0 && tvShowFavourite.length === 0 && (
-        <h3 className="text-secondary">Empty List</h3>
+        <h3 className="text-secondary">Favourite List is Empty.</h3>
       )}
     </div>
   );
