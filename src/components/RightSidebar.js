@@ -10,7 +10,7 @@ export const RightSidebar = () => {
       <div className="RightSidebar">
 
     <div>
-        <div className="Logo mb-1">
+        <div className="Logo mb-1 mt-3">
           <i className="fa fa-user-circle"></i>
         </div>
         <div className="mt-0">
@@ -23,7 +23,7 @@ export const RightSidebar = () => {
           <p className="text-warning">Premium Member</p>
         </div>
 </div>
-        <div className="LinksContainer mt-0 mb-5 pb-2">
+        <div className="LinksContainer mt-0 mb-5">
           <div className="Links d-flex flex-column align-items-center justify-content-center mb-5 pb-5">
             <div className="LinkEdit">
               <Link to="/" className="redColor">HOME</Link>
