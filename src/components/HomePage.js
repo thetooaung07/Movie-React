@@ -27,9 +27,9 @@ export const HomePage = () => {
   return (
     <div className="HomePage">
       <Header></Header>
-
+      <hr className="mb-3"></hr>
       <div className="wrapper">
-        <h5 className="text-secondary">Upcoming Movies</h5>
+        <h5 className="colorCustom text-left">Upcoming Movies</h5>
         <div className="MovieCard-container">
           {data.map((movie) => (
             <MovieCard key={movie.id} movie={movie} />

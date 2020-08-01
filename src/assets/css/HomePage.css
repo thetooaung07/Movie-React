@@ -1,5 +1,6 @@
 .HomePage {
-  margin-left: 27px;
+  padding-left: 27px;
+  background-color: rgb(255, 255, 255);
 }
 .MovieCard-container {
   display: flex;

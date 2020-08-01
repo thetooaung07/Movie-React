@@ -51,25 +51,27 @@ export const MovieCard = ({ movie }) => {
           </div>
 
           <div className="d-flex align-items-center editBtn">
+          
             <button
               disabled={localMovie}
-              className="btn btn-success btn-sm flex-grow-1 rounded-0 editBtn1"
+              className="btn btn-info btn-sm flex-grow-1 rounded-0 editBtn1"
               onClick={() => {
                 addMovieToWatchlist(movie);
               }}
             >
-              Add to Watchlist
+              {localMovie ? "Added to Watchlist" : "Add to Watchlist"}
             </button>
+
             {!localFavMovie ? (
               <button
-                className="btn btn-success btn-sm rounded-0 editBtn2"
+                className="btn btn-info btn-sm rounded-0 editBtn2"
                 onClick={() => addMovieToFavourite(movie)}
               >
                 <i className="fa fa-heart-o"></i>
               </button>
             ) : (
               <button
-                className="btn btn-success btn-sm rounded-0 editBtn2"
+                className="btn btn-info btn-sm rounded-0 editBtn2"
                 onClick={() => removeMovieFromFavourite(movie.id)}
               >
                 <i className="fa fa-heart"></i>

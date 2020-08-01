@@ -16,20 +16,13 @@ export const FavouriteMovie = ({ movieFavourite }) => {
 
       <div className="d-flex flex-column">
         <h6 className="titleEditor">{movieFavourite.title}</h6>
-
-        {/* <div className="d-flex mb-1">
-          {movieFavourite.genre_ids &&
-            movieFavourite.genre_ids.map((id) => (
-              <GenreMovie key={id} id={id} />
-            ))}
-        </div> */}
       </div>
-      <button
+      {/* <button
         className="btn btn-sm remove-fav"
         onClick={() => removeMovieFromFavourite(movieFavourite.id)}
       >
         <i className="fa fa-times"></i>
-      </button>
+      </button> */}
     </div>
   );
 };

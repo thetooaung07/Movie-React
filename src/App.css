@@ -30,10 +30,10 @@
   color: #61dafb;
 }
 ul {
-  list-style-type: none;
   text-decoration: none;
-  margin: 0;
-  padding: 0;
+  list-style-type: none;
+  margin: 0 !important;
+  padding: 0 !important ;
 }
 
 

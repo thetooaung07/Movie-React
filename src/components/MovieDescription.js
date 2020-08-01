@@ -45,10 +45,12 @@ export const MovieDescription = (props) => {
                 </span>
               ))}
             </div>
-            <div className="movieTagline text-left">
-              <span className=" text-danger">Tagline:</span>{" "}
-              {movieDetails.tagline}
-            </div>
+            {movieDetails.tagline && (
+              <div className="movieTagline text-left">
+                <span className=" text-danger">Tagline:</span>{" "}
+                {movieDetails.tagline}
+              </div>
+            )}
           </div>
 
           <div className="text-left">
@@ -65,6 +67,7 @@ export const MovieDescription = (props) => {
               Overview: <div className="ml-2">{movieDetails.overview}</div>
             </div>
             <p>Run Time: &nbsp;{movieDetails.runtime} Minutes.</p>
+            <p className="pt-0">Release Date: &nbsp;{movieDetails.release_date}  </p>
           </div>
         </div>
 
@@ -82,22 +85,21 @@ export const MovieDescription = (props) => {
                 src={`https://image.tmdb.org/t/p/w200${movieDetails.belongs_to_collection.poster_path}`}
                 alt={movieDetails.title}
               />
-              
-            </div><div hidden={showCollection}>{movieDetails.belongs_to_collection.name}</div>
+            </div>
+            <div hidden={showCollection}>
+              {movieDetails.belongs_to_collection.name}
+            </div>
           </div>
         )}
       </div>
 
-
-
-      <div className="SimilarMovie"> 
-          <h4 className="text-left">Similar Movie</h4>
-          <hr className="mb-3"></hr>
-
-          <SimilarMovie id={props.match.params.id}></SimilarMovie>
-       </div>
-
-
+      <div className="SimilarMovie mt-5">
+        <h4 className="text-left">Popular Movies</h4>
+        <hr className="mb-5" />
+        <div className="">
+          <SimilarMovie />
+        </div>
+      </div>
     </div>
   );
 };

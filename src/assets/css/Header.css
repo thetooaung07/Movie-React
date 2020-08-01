@@ -1,9 +1,22 @@
-.Header li {
-  font-size: 20px;
-  border-radius: 50%;
-  
+.Header li i {
+  color: red;
 }
 
-.Header li:hover {
+.Header .iconRound {
+  min-width: 40px;
+  max-width: 40px;
+  min-height: 40px;
+  max-height: 40px;
+  font-size: 20px;
+  border: transparent solid  rgb(255,85,0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 35px;
+}
+.Header .iconRound:hover {
   background-color: rgba(221, 221, 221, 0.788);
+}
+.colorCustom {
+  color: rgb(255,85,0);
 }

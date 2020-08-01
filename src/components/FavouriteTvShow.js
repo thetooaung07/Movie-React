@@ -1,5 +1,5 @@
 import React from "react";
-import { GenreShow } from "./GenreShow";
+// import { GenreShow } from "./GenreShow";
 
 export const FavouriteTvShow = ({ tvShowFavourite }) => {
   return (

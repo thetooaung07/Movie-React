@@ -5,11 +5,21 @@
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: rgba(182, 182, 182, 0.808);
+  background-color: rgba(24, 23, 23, 0.918);
   overflow-x: hidden;
   padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* align-items: center; */
 }
-
+.ul-nav {
+  list-style-type: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  margin: 0 auto;
+}
 .ul-nav * {
   color: white;
 }
@@ -22,5 +32,54 @@
 .margin-filler {
   display: block;
   height: 100%;
-  margin-right: 170px;
+  padding-right: 170px;
+}
+
+.Logo {
+  background-color: rgb(177, 65, 65);
+  min-width: 75px;
+  max-width: 75px;
+  min-height: 75px;
+  max-height: 75px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.Logo > i {
+  font-size: 50px;
+  color: white;
+}
+.Links .LinkEdit {
+  margin-bottom: 30px;
+  
+}
+.iconEdit {
+  min-width: 15px;
+  max-width: 15px;
+  min-height: 15px;
+  max-height: 15px;
+  background-color: rgb(58, 44, 44);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.divEdit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(187, 34, 80, 0.836);
+}
+.fa-angle-double-up {
+  color: red;
+}
+.redColor {
+  color: rgb(255, 60, 0);
+  font-weight: bold;
+}
+.redColor:hover {
+  color: rgba(190, 6, 6, 0.911);
 }
