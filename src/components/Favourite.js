@@ -9,13 +9,13 @@ export const Favourite = () => {
 
   return (
     <div className="Favourite mt-4 w-100">
-      <h3 className="text-left">Favourites</h3>
+      <h3 className="text-left colorCustom">Favourites</h3>
       <hr className=" mb-4" />
 
 
       {movieFavourite && movieFavourite.length > 0 && (
-        <div className="">
-          <h5 className="text-left">Favourite Movies</h5>
+        <div className="mb-3">
+          <h5 className="text-left favColor">Favourite Movies</h5>
           <div className="d-flex justify-content-start align-items-center flex-wrap">
             {movieFavourite.map((movieFavourite) => (
               <FavouriteMovie
@@ -27,9 +27,11 @@ export const Favourite = () => {
         </div>
       )}
 
+
+
       {tvShowFavourite && tvShowFavourite.length > 0 && (
         <div className="">
-          <h5 className="text-left">Favourite TV-Shows</h5>
+          <h5 className="text-left colorCustom">Favourite TV-Shows</h5>
           <div className="d-flex justify-content-start align-items-center flex-wrap">
             {tvShowFavourite.map((tvShowFavourite) => (
               <FavouriteTvShow

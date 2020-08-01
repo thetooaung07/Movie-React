@@ -12,17 +12,17 @@ export const Watchlist = () => {
   return (
     <div className="Watchlist w-100">
       <div className="d-flex justify-content-between align-items-center mt-4">
-        <h3 className="text-left">Watchlist</h3>
+        <h3 className="text-left colorCustom">Watchlist</h3>
         {isClicked === "movies" ? (
           <div className="toggleMS mr-5">
             <button
-              className=" btn-secondary btn1"
+              className=" movieColor btn1"
               onClick={() => setIsClicked("movies")}
             >
               Movies
             </button>
             <button
-              className="btn-light btn2"
+              className="showColor btn2"
               onClick={() => setIsClicked("tvShows")}
             >
               Shows
@@ -31,13 +31,13 @@ export const Watchlist = () => {
         ) : (
           <div className="toggleMS mr-5">
             <button
-              className=" btn-light btn1"
+              className=" showColor btn1"
               onClick={() => setIsClicked("movies")}
             >
               Movies
             </button>
             <button
-              className=" btn-secondary btn2"
+              className="movieColor btn2"
               onClick={() => setIsClicked("tvShows")}
             >
               Shows
@@ -49,7 +49,7 @@ export const Watchlist = () => {
 
       {isClicked === "movies" && movieWatchlist && movieWatchlist.length > 0 ? (
         <div className="mt-2">
-          <h4 className="text-secondary text-left"> Movies </h4>
+          <h4 className="text-left " style={{color:"#F93822FF"}}> Movies </h4>
           <div className="MovieCard-container">
             {movieWatchlist.map((movie) => (
               <WatchlistMovie key={movie.id} movie={movie} />
@@ -67,7 +67,7 @@ export const Watchlist = () => {
       tvShowWatchlist &&
       tvShowWatchlist.length > 0 ? (
         <div className="mt-2">
-          <h4 className="text-secondary text-left"> TV Shows </h4>
+          <h4 className=" text-left " style={{color:"#FDD20EFF"}}> TV Shows </h4>
           <div className="MovieCard-container">
             {tvShowWatchlist.map((tvShow) => (
               <WatchlistShow key={tvShow.id} tvShow={tvShow} />

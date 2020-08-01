@@ -18,7 +18,7 @@ export const RightSidebar = () => {
             <span className="iconEdit">
               <i className="fa fa-angle-double-up"></i>
             </span>
-            Thet Oo Aung
+            <span className="colorCustom">Thet Oo Aung</span>
           </div>
           <p className="text-warning">Premium Member</p>
         </div>

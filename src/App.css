@@ -97,3 +97,12 @@ ul {
   min-width: 200px;
   max-width: 200px;
 }
+
+.movieColor {
+  background-color: #F93822FF;
+  color: white;
+}
+.showColor {
+  background-color: #FDD20EFF;
+  color: white;
+}

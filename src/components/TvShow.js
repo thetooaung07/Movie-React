@@ -20,8 +20,8 @@ export const TvShow = () => {
   return (
     <div className="TvShow">
       <div className="wrapper">
-        <h4>TV Shows</h4>
-        <h6 className="text-left">Airing Today</h6>
+        <h4 className="colorCustom">TV Shows</h4>
+        <h5 className="text-left redColor">Airing Today</h5>
 
         <div className="TvShow-container">
           {tvShows &&
