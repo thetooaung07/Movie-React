@@ -49,7 +49,7 @@ export const Search = () => {
             <div className="searchbar" onMouseEnter={handleMouseEnter}>
               <CSSTransition
                 in={searchOpen}
-                timeout={5000}
+                timeout={10000}
                 classNames="alert"
                 onEnter={() => setSearchOpen(true)}
               >
