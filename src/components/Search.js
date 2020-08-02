@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../assets/css/Search.css";
 import Axios from "axios";
 import { SearchResult } from "./SearchResult";
-import { CSSTransition, transit } from "react-transition-group";
+import { CSSTransition } from "react-transition-group";
 
 export const Search = () => {
   const [input, setInput] = useState("");
