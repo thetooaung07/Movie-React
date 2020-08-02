@@ -9,8 +9,8 @@ export const Favourite = () => {
 
   return (
     <div className="Favourite mt-4 w-100">
-      <h3 className="text-left colorCustom">Favourites</h3>
-      <hr className=" mb-4" />
+      <h3 className="text-left colorCustom mb-4">Favourites</h3>
+      <hr className=" mb-5" />
 
 
       {movieFavourite && movieFavourite.length > 0 && (
@@ -43,7 +43,7 @@ export const Favourite = () => {
         </div>
       )}
       {movieFavourite.length === 0 && tvShowFavourite.length === 0 && (
-        <h3 className="text-secondary">Favourite List is Empty.</h3>
+        <h3 className="text-secondary mt-4">Favourite List is Empty.</h3>
       )}
     </div>
   );

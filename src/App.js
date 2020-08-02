@@ -9,6 +9,7 @@ import { TvShow } from "./components/TvShow";
 import { MovieDescription } from "./components/MovieDescription";
 import { GlobalProvider } from "./Context/GlobalState";
 import { TvShowDescription } from "./components/TvShowDescription";
+import { Search } from "./components/Search";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route exact path="/tvshow" component={TvShow} />
             <Route exact path="/movie/:id" component={MovieDescription} />
             <Route exact path="/tvShow/:id" component={TvShowDescription} />
+            <Route exact path="/search" component={Search} />
           </Switch>
         </Router>
       </GlobalProvider>

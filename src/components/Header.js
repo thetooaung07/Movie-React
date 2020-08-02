@@ -1,4 +1,5 @@
 import React from "react";
+import {Link } from 'react-router-dom'
 import "../assets/css/Header.css";
 
 
@@ -13,7 +14,8 @@ export const Header = () => {
 
         <ul className="d-flex">
           <li className="iconRound rounded">
-            <i className="fa fa-search"></i>
+          <Link to="/search"><i className="fa fa-search"></i></Link>
+            
           </li>
           <li className="iconRound rounded">
             <i className="fa fa-bookmark-o"></i>
