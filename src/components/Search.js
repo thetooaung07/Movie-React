@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "../assets/css/Search.css";
 import Axios from "axios";
 import { SearchResult } from "./SearchResult";
+import { CSSTransition, transit } from "react-transition-group";
 
 export const Search = () => {
   const [input, setInput] = useState("");
@@ -29,10 +30,8 @@ export const Search = () => {
     }
   };
   const handleMouseEnter = () => {
-    
-      setSearchOpen(true);
-   
-  }
+    setSearchOpen(true);
+  };
   const submitHandler = (event) => {
     event.preventDefault();
     getSearchResult();
@@ -48,28 +47,35 @@ export const Search = () => {
         <div className="w-50">
           <div className="d-flex justify-content-start h-100 ml-3">
             <div className="searchbar" onMouseEnter={handleMouseEnter}>
-              {searchOpen ? (
-                <form onSubmit={(event) => submitHandler(event)}>
-                  <input
-                    required
-                    className="search_input"
-                    type="text"
-                    name=""
-                    placeholder="Search..."
-                    onChange={(event) => {
-                      event.preventDefault();
-                      setInput(event.target.value);
-                    }}
-                  />
-                  <button className="btn btn-sm initial-search-icon search_icon">
+              <CSSTransition
+                in={searchOpen}
+                timeout={5000}
+                classNames="alert"
+                onEnter={() => setSearchOpen(true)}
+              >
+                {searchOpen ? (
+                  <form onSubmit={(event) => submitHandler(event)}>
+                    <input
+                      required
+                      className="search_input"
+                      type="text"
+                      name=""
+                      placeholder="Search..."
+                      onChange={(event) => {
+                        event.preventDefault();
+                        setInput(event.target.value);
+                      }}
+                    />
+                    <button className="btn btn-sm initial-search-icon search_icon">
+                      <i className="fa fa-search"></i>
+                    </button>
+                  </form>
+                ) : (
+                  <button className="btn btn-sm text-danger initial-search-icon">
                     <i className="fa fa-search"></i>
                   </button>
-                </form>
-              ) : (
-                <button className="btn btn-sm text-danger initial-search-icon">
-                  <i className="fa fa-search"></i>
-                </button>
-              )}
+                )}
+              </CSSTransition>
             </div>
           </div>
         </div>
